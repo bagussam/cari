@@ -1,0 +1,5 @@
+# Folder dependensi yang besar
+node_modules
+
+# File yang berisi kunci rahasia
+.env
