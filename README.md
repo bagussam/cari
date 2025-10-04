@@ -86,4 +86,4 @@ Open the Application: Open your browser and navigate to http://localhost:3000.
 
 
 🚢 Publishing to GitHub
-For a guide on how to upload this project to your GitHub repository, please refer to the README-DEPLOYMENT.md file.
+For a guide on how to upload this project to your GitHub repository
