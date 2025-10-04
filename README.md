@@ -1,88 +1,89 @@
-cari.AI - Detektif Digital Multimodal
-Selamat datang di cari.AI, sebuah chatbot cerdas yang dirancang dengan persona seorang detektif digital. Aplikasi ini tidak hanya menjawab pertanyaan, tetapi juga mampu menganalisis "bukti" dalam berbagai format, melakukan "investigasi" di internet secara real-time, dan bahkan membuat "sketsa visual" berdasarkan deskripsi Anda.
+cari.AI - Multimodal Digital Detective
+Welcome to cari.AI, an intelligent chatbot designed with the persona of a digital detective. This application not only answers questions but is also capable of analyzing "evidence" in various formats, conducting real-time "investigations" on the internet, and even creating "visual sketches" based on your descriptions.
 
-✨ Fitur Utama
-Kecerdasan Kontekstual & Humanis: Dibekali kemampuan untuk memahami percakapan sehari-hari, mendeteksi emosi, dan memberikan umpan balik agar interaksi terasa lebih hidup.
+✨ Key Features
+Contextual & Humanistic Intelligence: Equipped with the ability to understand daily conversations, detect emotions, and provide feedback to make interactions feel more alive.
 
-Kemampuan Multimodal:
+Multimodal Capabilities:
 
-Analisis Gambar: Unggah file gambar (.jpg, .png, dll.) dan ajukan pertanyaan tentang isinya.
+Image Analysis: Upload image files (.jpg, .png, etc.) and ask questions about their content.
 
-Analisis Dokumen: Unggah file teks (.txt, .md) untuk diringkas atau dianalisis.
+Document Analysis: Upload text files (.txt, .md) to be summarized or analyzed.
 
-Generasi Gambar (Text-to-Image): Buat gambar unik langsung dari obrolan dengan perintah seperti "buatkan gambar...".
+Image Generation (Text-to-Image): Create unique images directly from the chat with commands like "create a picture of...".
 
-RAG (Retrieval-Augmented Generation): Terintegrasi dengan Exa API dan LangChain untuk mencari informasi terbaru di internet, memastikan jawaban selalu relevan dan faktual.
+RAG (Retrieval-Augmented Generation): Integrated with the Exa API and LangChain to search for the latest information on the internet, ensuring answers are always relevant and factual.
 
-Antarmuka Adaptif & Tematik:
+Adaptive & Thematic Interface:
 
-Dua Pilihan Tema: Beralih antara mode "Ceria" (terang) dan "Misterius" (gelap).
+Dual Theme Options: Switch between "Cheerful" (light) and "Mysterious" (dark) modes.
 
-Desain Responsif: Tampilan yang optimal di perangkat desktop, tablet, maupun mobile.
+Responsive Design: Optimal display on desktop, tablet, and mobile devices.
 
-UI Detektif: Dihiasi dengan elemen visual bertema investigasi untuk pengalaman yang lebih imersif.
+Detective UI: Adorned with visual elements themed around investigation for a more immersive experience.
 
-🛠️ Tumpukan Teknologi (Tech Stack)
+🛠️ Tech Stack
 Frontend: HTML5, CSS3, Vanilla JavaScript
 
 Backend: Node.js, Express.js
 
-AI & API:
+AI & APIs:
 
-Model Bahasa Inti: Google Gemini 2.5 Flash
+Core Language Model: Google Gemini 2.5 Flash
 
-Generasi Gambar: Google Imagen 3
+Image Generation: Google Imagen 3
 
-Pencarian Web: Exa API
+Web Search: Exa API
 
-Orkestrasi RAG: LangChain.js
+RAG Orchestration: LangChain.js
 
-🚀 Memulai (Getting Started)
-Ikuti langkah-langkah ini untuk menjalankan proyek di komputer lokal Anda.
+🚀 Getting Started
+Follow these steps to run the project on your local machine.
 
-Prasyarat
-Node.js: Pastikan Anda memiliki Node.js versi 18 atau lebih baru.
+Prerequisites
+Node.js: Ensure you have Node.js version 18 or newer installed.
 
-Git: Diperlukan untuk mengkloning repository.
+Git: Required for cloning the repository.
 
-API Keys: Anda memerlukan kunci API dari:
+API Keys: You will need API keys from:
 
-Google AI Studio (untuk Gemini & Imagen)
+Google AI Studio (for Gemini & Imagen)
 
 Exa API
 
-Instalasi
-Buat File .env: Di direktori utama proyek, buat file bernama .env dan isi dengan kunci API Anda seperti contoh di bawah:
+Installation
+Create .env File: In the project's root directory, create a file named .env and fill it with your API keys as shown in the example below:
 
-GEMINI_API_KEY=Kunci_API_Google_Anda
-EXA_API_KEY=Kunci_API_Exa_Anda
+GEMINI_API_KEY=Your_Google_API_Key
+EXA_API_KEY=Your_Exa_API_Key
 
-Instal Dependensi: Buka terminal di folder proyek dan jalankan perintah:
+Install Dependencies: Open a terminal in the project folder and run the command:
 
 npm install
 
-Jika Anda mengalami error ERESOLVE, gunakan perintah berikut:
+If you encounter an ERESOLVE error, use the following command instead:
 
 npm install --legacy-peer-deps
 
-Jalankan Server: Setelah instalasi selesai, jalankan server dengan:
+Run the Server: Once the installation is complete, run the server with:
 
 node index.js
 
-Buka Aplikasi: Buka browser Anda dan kunjungi alamat http://localhost:3000.
+Open the Application: Open your browser and navigate to http://localhost:3000.
 
-📂 Struktur Proyek
+📂 Project Structure
 /
-├── public/                 # Semua file frontend (tampilan)
-│   ├── index.html          # Struktur utama halaman
-│   ├── style.css           # Styling dan tema
-│   └── script.js           # Logika interaktif pengguna
-├── node_modules/           # Folder dependensi (dibuat otomatis)
-├── .env                    # File untuk menyimpan kunci API (rahasia)
-├── .gitignore              # Daftar file yang diabaikan oleh Git
-├── index.js                # Logika utama server dan AI
-├── package.json            # Konfigurasi proyek dan daftar dependensi
-└── README.md               # Dokumentasi ini
+├── public/                 # All frontend files (view)
+│   ├── index.html          # Main page structure
+│   ├── style.css           # Styling and themes
+│   └── script.js           # User interaction logic
+├── node_modules/           # Dependency folder (auto-generated)
+├── .env                    # File for storing secret API keys
+├── .gitignore              # List of files ignored by Git
+├── index.js                # Main server and AI logic
+├── package.json            # Project configuration and dependency list
+└── README.md               # This documentation
 
-🚢 Publikasi ke GitHub
-Untuk panduan cara mengunggah proyek ini ke repository GitHub Anda, silakan merujuk ke file README-DEPLOYMENT.md.
+
+🚢 Publishing to GitHub
+For a guide on how to upload this project to your GitHub repository, please refer to the README-DEPLOYMENT.md file.
