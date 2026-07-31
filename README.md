@@ -1,89 +1,301 @@
-cari.AI - Multimodal Digital Detective
-Welcome to cari.AI, an intelligent chatbot designed with the persona of a digital detective. This application not only answers questions but is also capable of analyzing "evidence" in various formats, conducting real-time "investigations" on the internet, and even creating "visual sketches" based on your descriptions.
+# 🕵️‍♂️ cari.AI – Multimodal Digital Detective & RAG Chatbot
 
-✨ Key Features
-Contextual & Humanistic Intelligence: Equipped with the ability to understand daily conversations, detect emotions, and provide feedback to make interactions feel more alive.
+> **cari.AI** is an AI-powered multimodal chatbot that acts as a digital detective, capable of conducting real-time web investigations, retrieving trusted information, and generating context-aware responses through Retrieval-Augmented Generation (RAG). Built with **Node.js**, **Express.js**, **LangChain.js**, and **Google Gemini 2.5 Flash**, the application combines modern AI orchestration with enterprise-grade backend security.
 
-Multimodal Capabilities:
+---
 
-Image Analysis: Upload image files (.jpg, .png, etc.) and ask questions about their content.
+## ✨ Features
 
-Document Analysis: Upload text files (.txt, .md) to be summarized or analyzed.
+### 🧠 Intelligent Conversational AI
+- Powered by **Google Gemini 2.5 Flash**
+- Natural, context-aware conversations
+- Supports multimodal reasoning and document understanding
 
-Image Generation (Text-to-Image): Create unique images directly from the chat with commands like "create a picture of...".
+### 🔍 Real-Time Retrieval-Augmented Generation (RAG)
+- Live web search using **Exa AI**
+- Automatically retrieves and analyzes relevant online sources
+- Context grounding through LangChain pipelines
+- Web scraping support using **Cheerio**
 
-RAG (Retrieval-Augmented Generation): Integrated with the Exa API and LangChain to search for the latest information on the internet, ensuring answers are always relevant and factual.
+### 📚 Vector Memory
+- Memory-based document retrieval
+- Semantic search with **Memory Vector Store**
+- Context preservation across conversations
 
-Adaptive & Thematic Interface:
+### 🛡️ Enterprise-Level Security
+- HTTP security headers via **Helmet**
+- API rate limiting with **Express Rate Limit**
+- Request validation using **Express Validator**
+- HTTP Parameter Pollution protection (**HPP**)
+- Environment variable management with **dotenv**
 
-Dual Theme Options: Switch between "Cheerful" (light) and "Mysterious" (dark) modes.
+### ⚡ High Performance Backend
+- Express.js REST API
+- ES Modules architecture
+- Modular and scalable codebase
+- Easy integration with frontend applications
 
-Responsive Design: Optimal display on desktop, tablet, and mobile devices.
+---
 
-Detective UI: Adorned with visual elements themed around investigation for a more immersive experience.
+# 🏗️ Tech Stack
 
-🛠️ Tech Stack
-Frontend: HTML5, CSS3, Vanilla JavaScript
+## Backend
+- Node.js
+- Express.js
+- ES Modules
 
-Backend: Node.js, Express.js
+## Artificial Intelligence
+- Google Gemini 2.5 Flash
+- LangChain.js
+- LangChain Community
+- LangChain Google GenAI
 
-AI & APIs:
+## Search & Retrieval
+- Exa AI API
+- Cheerio
+- Memory Vector Store
 
-Core Language Model: Google Gemini 2.5 Flash
+## Security
+- Helmet
+- Express Rate Limit
+- Express Validator
+- HPP
+- dotenv
 
-Image Generation: Google Imagen 3
+---
 
-Web Search: Exa API
+# 📦 Dependencies
 
-RAG Orchestration: LangChain.js
+### Core Dependencies
 
-🚀 Getting Started
-Follow these steps to run the project on your local machine.
+| Package | Description |
+|---------|-------------|
+| express | Web framework |
+| cors | Cross-Origin Resource Sharing |
+| dotenv | Environment variables |
+| langchain | LLM orchestration |
+| @langchain/community | LangChain community integrations |
+| @langchain/google-genai | Google Gemini integration |
+| @google/generative-ai | Gemini SDK |
+| exa-js | Exa Search API |
+| cheerio | HTML parser |
+| memory-vector-store | Vector memory storage |
+| helmet | HTTP security headers |
+| express-rate-limit | Rate limiting |
+| express-validator | Input validation |
+| hpp | HTTP Parameter Pollution protection |
 
-Prerequisites
-Node.js: Ensure you have Node.js version 18 or newer installed.
+---
 
-Git: Required for cloning the repository.
+# 🚀 Getting Started
 
-API Keys: You will need API keys from:
+## Prerequisites
 
-Google AI Studio (for Gemini & Imagen)
+Before running this project, make sure you have:
 
-Exa API
+- Node.js **v18+**
+- npm
+- Google Gemini API Key
+- Exa API Key
 
-Installation
-Create .env File: In the project's root directory, create a file named .env and fill it with your API keys as shown in the example below:
+---
 
-GEMINI_API_KEY=Your_Google_API_Key
-EXA_API_KEY=Your_Exa_API_Key
+## Installation
 
-Install Dependencies: Open a terminal in the project folder and run the command:
+### Clone the repository
 
+```bash
+git clone https://github.com/bagussam/cari.AI.git
+```
+
+```bash
+cd cari.AI
+```
+
+---
+
+### Install dependencies
+
+```bash
 npm install
+```
 
-If you encounter an ERESOLVE error, use the following command instead:
+---
 
-npm install --legacy-peer-deps
+### Configure Environment Variables
 
-Run the Server: Once the installation is complete, run the server with:
+Create a `.env` file in the project root.
 
+```env
+GEMINI_API_KEY=your_google_gemini_api_key
+EXA_API_KEY=your_exa_api_key
+PORT=3000
+```
+
+---
+
+### Start the development server
+
+```bash
+npm start
+```
+
+or
+
+```bash
 node index.js
+```
 
-Open the Application: Open your browser and navigate to http://localhost:3000.
+The server will be running at
 
-📂 Project Structure
-/
-├── public/                 # All frontend files (view)
-│   ├── index.html          # Main page structure
-│   ├── style.css           # Styling and themes
-│   └── script.js           # User interaction logic
-├── node_modules/           # Dependency folder (auto-generated)
-├── .env                    # File for storing secret API keys
-├── .gitignore              # List of files ignored by Git
-├── index.js                # Main server and AI logic
-├── package.json            # Project configuration and dependency list
-└── README.md               # This documentation
+```
+http://localhost:3000
+```
 
+---
 
-🚢 Publishing to GitHub
-For a guide on how to upload this project to your GitHub repository
+# 📁 Project Structure
+
+```
+cari.AI/
+│
+├── public/                    # Frontend assets
+│   ├── index.html
+│   ├── css/
+│   ├── js/
+│   └── assets/
+│
+├── node_modules/
+│
+├── .env
+├── .gitignore
+├── index.js                   # Express server & LangChain RAG pipeline
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
+# 🔄 System Workflow
+
+```text
+                    User Query
+                         │
+                         ▼
+               Express.js API Server
+                         │
+                         ▼
+              LangChain Orchestrator
+                         │
+        ┌────────────────┴────────────────┐
+        │                                 │
+        ▼                                 ▼
+ Google Gemini 2.5 Flash           Exa Search API
+        │                                 │
+        ▼                                 ▼
+  Context Understanding         Retrieve Web Documents
+        │                                 │
+        └──────────────┬──────────────────┘
+                       ▼
+             Memory Vector Store
+                       │
+                       ▼
+             Contextual Response
+                       │
+                       ▼
+                    Frontend
+```
+
+---
+
+# 🔒 Security Features
+
+This project follows several backend security best practices:
+
+- ✅ Secure HTTP Headers (Helmet)
+- ✅ API Rate Limiting
+- ✅ Input Validation
+- ✅ HTTP Parameter Pollution Protection
+- ✅ Environment Variable Isolation
+- ✅ CORS Configuration
+
+---
+
+# 🎯 Use Cases
+
+- AI Research Assistant
+- Digital Investigation
+- Real-Time Knowledge Retrieval
+- Retrieval-Augmented Chatbot
+- Educational Assistant
+- Technical Documentation Search
+- Internal Knowledge Base
+- Customer Support AI
+
+---
+
+# 📈 Future Improvements
+
+- Conversation History Database
+- Authentication & Authorization
+- File Upload (PDF, DOCX)
+- Vector Database Integration (Pinecone, Chroma, Weaviate)
+- Voice-to-Text Support
+- Image Understanding
+- Multi-Agent Workflow
+- Streaming Responses
+- Docker Deployment
+- CI/CD Pipeline
+- Redis Caching
+- Kubernetes Deployment
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome!
+
+1. Fork this repository.
+2. Create a feature branch.
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to GitHub.
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Open a Pull Request.
+
+---
+
+# 📄 License
+
+This project is licensed under the **ISC License**.
+
+---
+
+# 👨‍💻 Author
+
+**Bagus Samudro Aji Luhur**
+
+- GitHub: https://github.com/bagussam
+- LinkedIn: https://linkedin.com/in/bagus-samudro-aji-luhur/
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub.
+
+Your support helps improve and maintain future AI-powered open-source projects.
